@@ -1,0 +1,146 @@
+/* 웹 화면 전체 중앙 정렬 */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 제목(h1) 옆에 설명(p)이 오도록 설정 */
+.header {
+  display: flex;
+  align-items: baseline; /* 텍스트 아래 기준선 맞춤 */
+  gap: 12px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f1f3f5;
+  padding-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #212529;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #868e96;
+  margin: 0;
+}
+
+/* 입력창 영역 */
+.input-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-input:focus {
+  border-color: #ff4d4d;
+}
+
+.add-button {
+  padding: 0 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-button:hover {
+  background-color: #e63e3e;
+}
+
+/* 리스트 아이템 스타일 */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #f1f3f5;
+}
+
+/* 체크박스와 글자를 묶는 컨테이너 */
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* 체크박스 스타일 */
+.todo-checkbox {
+  display: flex;       /* 가로로 나란히 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 15px;           /* ⭐ 체크박스와 텍스트 사이의 간격 (원하는 만큼 조절하세요) */
+  cursor: pointer;
+  flex: 1;             /* 남은 공간을 꽉 채우도록 설정 */
+}
+
+.todo-text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* 완료된 상태 스타일 */
+.completed {
+  opacity: 0.5;
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+}
+
+/* 삭제 버튼 */
+.delete {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.delete:hover {
+  background-color: #ffebec;
+}
+
+.empty-state {
+  text-align: center;
+  color: #adb5bd;
+  padding: 30px 0;
+}
